@@ -1,0 +1,36 @@
+@use '../abstracts/' as *;
+.footer{
+    width: 100%;
+    min-height: 60rem;
+    margin-top: 8rem;
+    padding: 8rem 0;
+   
+    &__container{
+        width: 100%;
+
+        &__block{
+            background:$white;
+            padding: 2rem;
+        }
+    }
+
+    &__intro{
+        &__img{
+            width: 15rem;
+            img{
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+        }
+        &__msg{
+            margin-top: 2rem;
+            font-size: 1.6rem;
+            color: $silverlight;
+            width: 80%;
+            font-weight: 400;
+            line-height: 2.5rem;
+        }
+    }
+}
+

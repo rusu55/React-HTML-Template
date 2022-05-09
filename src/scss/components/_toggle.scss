@@ -1,0 +1,52 @@
+@use '../abstracts' as *;
+
+.toggle-open{
+    @include position(fixed, 4rem, null, null, 5rem, null, null);
+    cursor: pointer;
+    z-index: 3;
+    @include responsive(large){
+        right: 5rem;
+    }
+    @include responsive(medium){
+        right:4rem;
+    }
+    @include responsive(small){
+        right:2rem;
+    }
+    span:nth-child(1){
+       @include toggleSpan(block, $main2, 3rem, .3rem, null);   
+
+    }
+    span:nth-child(2){
+        @include toggleSpan(block, $main2, 3rem, .3rem, .5rem);
+         }
+    span:nth-child(3){
+        @include toggleSpan(block, $main2, 3rem, .3rem, .5rem);
+    }
+}
+
+.toggle-close{
+    @include position(fixed, 4rem, null, null, 5rem, null, null);
+    cursor: pointer;
+    z-index: 3;
+    @include responsive(large){
+        right: 5rem;
+    }
+    @include responsive(medium){
+        right:4rem;
+    }
+    @include responsive(small){
+        right:2rem;
+    }
+    span:nth-child(1){
+       @include toggleSpan(block, $main2, 3rem, .3rem, null);   
+        transform: rotate(-45deg) translateY(.5rem);
+    }
+    span:nth-child(2){
+        display: none;
+         }
+    span:nth-child(3){
+        @include toggleSpan(block, $main2, 3rem, .3rem, .5rem);
+        transform: rotate(45deg) translateY(-.5rem);;
+    }
+}
